@@ -558,3 +558,50 @@ h1, h2, h3, h4{
   .hero-facts{ gap: 28px; }
   .footer-inner{ flex-direction: column; text-align: center; }
 }
+
+/* ============================================================
+   Botón de pedido por WhatsApp (menú)
+   ============================================================ */
+.dish-list li > .dish-name{ flex: 1; min-width: 0; }
+.dish-order{
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: -4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--ember);
+  background: transparent;
+  border: 1px solid var(--ember);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.dish-order:hover,
+.dish-order:focus-visible{
+  color: var(--black);
+  background: var(--ember);
+}
+.dish-order:hover{ transform: translateY(-1px); }
+.dish-order:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px){
+  .dish-list li{ gap: 12px; }
+  .dish-order{ padding: 9px; }
+  .dish-order-text{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
