@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/fondohero.webp" type="image/webp" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,16 +38,25 @@
 
 <main>
 
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <picture>
+        <source srcset="assets/fondohero.webp" type="image/webp">
+        <img src="assets/fondohero.jpg" alt="" width="2610" height="1600" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <img src="assets/logo.png" alt="Alta Gama" class="hero-logo">
       <p class="hero-eyebrow">Punta de Mata &amp; Anaco · Anzoátegui</p>
       <h1>Se come bien, se come Alta&nbsp;Gama</h1>
       <p class="hero-copy">Bodegón y exquisiteces con parrilla al carbón, cachapas de asadura y desayunos criollos. Abierto los siete días, para sentarte en mesa o para llevar.</p>
       <div class="hero-actions">
+        <a class="btn btn-delivery" href="https://wa.me/584141604548?text=Hola%20Alta%20Gama%2C%20quiero%20hacer%20un%20pedido%20por%20delivery.%0A%0ANombre%20y%20apellido%3A%20%0ADirecci%C3%B3n%20de%20entrega%3A%20" target="_blank" rel="noopener"><svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.77.96-.14.17-.28.18-.53.06a6.7 6.7 0 0 1-1.97-1.22 7.4 7.4 0 0 1-1.36-1.69c-.14-.25-.02-.38.1-.5.11-.11.25-.28.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.17 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35.99 2.52c.12.16 1.71 2.62 4.15 3.67.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>Pedir delivery por WhatsApp</a>
         <a class="btn btn-primary" href="https://wa.me/584249516868?text=Hola%20Alta%20Gama%2C%20quiero%20reservar%20una%20mesa" target="_blank" rel="noopener">Reservar una mesa</a>
         <a class="btn btn-ghost" href="#menu">Ver el menú</a>
       </div>
+      <p class="hero-delivery-note">Delivery: <strong>0414&nbsp;160&nbsp;4548</strong></p>
       <ul class="hero-facts">
         <li><span>Lun – Lun</span>Abierto todos los días</li>
         <li><span>0424&nbsp;951&nbsp;6868</span>Llamadas y WhatsApp</li>
@@ -65,7 +75,8 @@
       <div class="menu-tabs reveal" id="menuTabs" role="tablist" aria-label="Categorías del menú">
         <button class="tab-btn is-active" role="tab" aria-selected="true" data-target="desayunos">Desayunos</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-target="cachapas">Cachapas</button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-target="pastas">Pastas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="entradas">Entradas</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-target="pastas">Pastas y Arroces</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-target="carnes">Carnes y Aves</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-target="asados">Asados y Brasas</button>
         <button class="tab-btn" role="tab" aria-selected="false" data-target="mariscos">Pescados y Mariscos</button>
@@ -81,8 +92,12 @@
           <ul class="dish-list">
             <li><span class="dish-name">Arepa Rellena <em>(reina pepiada, asadura, cazón, pollo, carne, queso amarillo, salchicha, ensalada de gallina o cochino)</em></span><span class="dish-price">5,00&nbsp;$</span></li>
             <li><span class="dish-name">Arepa Mixta</span><span class="dish-price">6,00&nbsp;$</span></li>
+            <li><span class="dish-name">Arepa de Lengua en Salsa</span></li>
+            <li><span class="dish-name">Arepa de Queso de Mano</span></li>
+            <li><span class="dish-name">Arepa de Ensalada de Atún</span></li>
             <li><span class="dish-name">Desayuno Americano</span><span class="dish-price">11,00&nbsp;$</span></li>
             <li><span class="dish-name">Desayuno Criollo</span><span class="dish-price">9,50&nbsp;$</span></li>
+            <li><span class="dish-name">Desayuno Criollo de la Casa <em>(huevo, queso guayanés, pollo, carne y arepa)</em></span></li>
             <li><span class="dish-name">Sandwich Clásico</span><span class="dish-price">8,00&nbsp;$</span></li>
             <li><span class="dish-name">Sandwich Especial</span><span class="dish-price">11,00&nbsp;$</span></li>
             <li><span class="dish-name">Empanadas de Jamón y Queso</span><span class="dish-price">3,00&nbsp;$</span></li>
@@ -98,15 +113,32 @@
             <li><span class="dish-name">Cachapa Mediana <em>(cochino y queso de mano)</em></span><span class="dish-price">12,00&nbsp;$</span></li>
             <li><span class="dish-name">Cachapa Grande <em>(queso de mano)</em></span><span class="dish-price">15,00&nbsp;$</span></li>
             <li><span class="dish-name">Cachapa Mediana <em>(queso de mano)</em></span><span class="dish-price">7,50&nbsp;$</span></li>
+            <li><span class="dish-name">Cachapa con Queso Guayanés y Aguacate</span></li>
+            <li><span class="dish-name">Cachapa con Doble Contorno</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" id="entradas" role="tabpanel">
+          <ul class="dish-list">
+            <li><span class="dish-name">Arepita, Nata y Queso de Mano</span></li>
+            <li><span class="dish-name">Pan con Ajo</span></li>
+            <li><span class="dish-name">Casabe con Ajo y Queso</span></li>
+            <li><span class="dish-name">Tequeños Especiales de la Casa</span></li>
+            <li><span class="dish-name">Champiñones al Ajillo</span></li>
+            <li><span class="dish-name">Carpaccio</span></li>
           </ul>
         </div>
 
         <div class="menu-panel" id="pastas" role="tabpanel">
           <ul class="dish-list">
+            <li><span class="dish-name">Paella Valenciana</span></li>
+            <li><span class="dish-name">Fideuás de Mariscos</span></li>
             <li><span class="dish-name">Pasticho</span><span class="dish-price">12,00&nbsp;$</span></li>
             <li><span class="dish-name">Pasta Carbonara</span><span class="dish-price">12,00&nbsp;$</span></li>
             <li><span class="dish-name">Pasta Alfredo con Pollo</span><span class="dish-price">12,00&nbsp;$</span></li>
+            <li><span class="dish-name">Linguinis al Fileto</span></li>
             <li><span class="dish-name">Pasta Filetto Bettina</span><span class="dish-price">14,00&nbsp;$</span></li>
+            <li><span class="dish-name">Pasta Amatriciana</span></li>
             <li><span class="dish-name">Pasta Puttanesca</span><span class="dish-price">14,00&nbsp;$</span></li>
             <li><span class="dish-name">Pasta San Giorgio <em>(salsa de camarones)</em></span><span class="dish-price">18,00&nbsp;$</span></li>
             <li><span class="dish-name">Pasta Marinera</span><span class="dish-price">18,00&nbsp;$</span></li>
@@ -120,14 +152,19 @@
             <li><span class="dish-name">Suprema de Pollo a la Americana</span><span class="dish-price">16,00&nbsp;$</span></li>
             <li><span class="dish-name">Pollo en Salsa de Champiñones</span><span class="dish-price">16,00&nbsp;$</span></li>
             <li><span class="dish-name">Pabellón Criollo</span><span class="dish-price">8,00&nbsp;$</span></li>
+            <li><span class="dish-name">Escalopinas de Lomito</span></li>
             <li><span class="dish-name">Tenders de Pollo</span><span class="dish-price">12,00&nbsp;$</span></li>
             <li><span class="dish-name">Estofado de Cordero</span><span class="dish-price">15,00&nbsp;$</span></li>
+            <li><span class="dish-name">Carne a la Primavera</span></li>
             <li><span class="dish-name">Lomito a la Brasa</span><span class="dish-price">20,00&nbsp;$</span></li>
             <li><span class="dish-name">Muchacho en Salsa Negra</span><span class="dish-price">15,00&nbsp;$</span></li>
             <li><span class="dish-name">Pollo a la Capresa</span><span class="dish-price">15,00&nbsp;$</span></li>
             <li><span class="dish-name">Milanesa de Pollo Suiza</span><span class="dish-price">15,50&nbsp;$</span></li>
             <li><span class="dish-name">Medallones de Lomito al Vinotinto</span><span class="dish-price">16,00&nbsp;$</span></li>
+            <li><span class="dish-name">Salteado de Lomito al Jerez</span></li>
+            <li><span class="dish-name">Salteado de Lomito con Champiñones</span></li>
             <li><span class="dish-name">Filete Miñón con Champiñones</span><span class="dish-price">16,00&nbsp;$</span></li>
+            <li><span class="dish-name">Pollo Grillé</span></li>
             <li><span class="dish-name">Pollo a la Plancha</span><span class="dish-price">10,00&nbsp;$</span></li>
           </ul>
         </div>
@@ -148,11 +185,16 @@
             <li><span class="dish-name">Cochino Frito <em>(1 kg)</em></span><span class="dish-price">30,00&nbsp;$</span></li>
             <li><span class="dish-name">Ración de Morcilla</span><span class="dish-price">10,00&nbsp;$</span></li>
             <li><span class="dish-name">Ración de Chorizo</span><span class="dish-price">12,00&nbsp;$</span></li>
+            <li><span class="dish-name">Ración de Queso de Mano</span></li>
+            <li><span class="dish-name">Ración de Queso Guayanés</span></li>
+            <li><span class="dish-name">Ración de Queso Mozzarella</span></li>
             <li><span class="dish-name">Pollo Asado <em>(entero)</em></span><span class="dish-price">20,00&nbsp;$</span></li>
             <li><span class="dish-name">Pollo Asado <em>(medio)</em></span><span class="dish-price">10,00&nbsp;$</span></li>
+            <li><span class="dish-name">Pollo a la Broster</span></li>
             <li><span class="dish-name">Parrilla Mixta</span><span class="dish-price">12,00&nbsp;$</span></li>
             <li><span class="dish-name">Parrilla Mixta <em>(2 personas)</em></span><span class="dish-price">19,00&nbsp;$</span></li>
             <li><span class="dish-name">Parrilla Alta Gama</span><span class="dish-price">35,00&nbsp;$</span></li>
+            <li><span class="dish-name">Parrilla Personal</span></li>
             <li><span class="dish-name">Sopa de Res</span><span class="dish-price">5,00&nbsp;$</span></li>
             <li><span class="dish-name">Sopa de Menestrón</span><span class="dish-price">5,00&nbsp;$</span></li>
           </ul>
@@ -170,6 +212,7 @@
 
         <div class="menu-panel" id="rapida" role="tabpanel">
           <ul class="dish-list">
+            <li><span class="dish-name">Hamburguesa Clásica <em>(salsa clásica, vegetales, jamón, queso y 200 grs de carne)</em></span></li>
             <li><span class="dish-name">Hamburguesa Crispy</span><span class="dish-price">8,00&nbsp;$</span></li>
             <li><span class="dish-name">Hamburguesa Americana</span><span class="dish-price">7,00&nbsp;$</span></li>
             <li><span class="dish-name">Hamburguesa Cheesey</span><span class="dish-price">8,00&nbsp;$</span></li>
@@ -189,6 +232,7 @@
             <li><span class="dish-name">Ensalada César con Camarones</span><span class="dish-price">16,00&nbsp;$</span></li>
             <li><span class="dish-name">Ensalada Capresa</span><span class="dish-price">8,00&nbsp;$</span></li>
             <li><span class="dish-name">Ensalada Mixta</span><span class="dish-price">6,50&nbsp;$</span></li>
+            <li><span class="dish-name">Ensalada Criolla Coleslaw</span></li>
           </ul>
         </div>
 
@@ -214,6 +258,7 @@
             <li><span class="dish-name">Refresco <em>(1&nbsp;litro)</em></span><span class="dish-price">1,50&nbsp;$</span></li>
             <li><span class="dish-name">Refresco <em>(1.5&nbsp;litros)</em></span><span class="dish-price">2,00&nbsp;$</span></li>
             <li><span class="dish-name">Refresco <em>(2&nbsp;litros)</em></span><span class="dish-price">2,50&nbsp;$</span></li>
+            <li><span class="dish-name">Malta</span></li>
             <li><span class="dish-name">Jugo Yukeri Pequeño</span><span class="dish-price">1,30&nbsp;$</span></li>
             <li><span class="dish-name">Jugo Yukeri <em>(1.75&nbsp;litros)</em></span><span class="dish-price">3,00&nbsp;$</span></li>
             <li><span class="dish-name">Bebida Energizante</span><span class="dish-price">2,00&nbsp;$</span></li>

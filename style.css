@@ -181,11 +181,49 @@ h1, h2, h3, h4{
 .hero{
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: min(92vh, 880px);
   padding: 88px 0 76px;
   text-align: center;
-  background:
-    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(211,27,31,0.09), transparent 65%);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--black);
   border-bottom: 1px solid var(--line);
+}
+.hero-inner{ position: relative; z-index: 2; width: 100%; }
+
+/* Imagen de fondo: capa propia (no afecta el contenido) */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  animation: heroSettle 1.8s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero-bg img{
+  position: absolute;
+  left: 0;
+  top: -8%;
+  width: 100%;
+  height: 116%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 100%;
+  will-change: transform;
+}
+@keyframes heroSettle{
+  from{ transform: scale(1.07); opacity: 0.55; }
+  to{ transform: scale(1); opacity: 1; }
+}
+/* Velo: oscurece el centro para el texto, deja ver las llamas a los lados y funde con la siguiente sección */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 62% 58% at 50% 46%, rgba(10,8,6,0.66), rgba(10,8,6,0.18) 78%),
+    linear-gradient(180deg, rgba(10,8,6,0.55) 0%, rgba(10,8,6,0.10) 38%, rgba(10,8,6,0.55) 82%, var(--black) 100%);
 }
 .hero-logo{
   width: 128px;
@@ -193,7 +231,7 @@ h1, h2, h3, h4{
   border-radius: 50%;
   margin: 0 auto 28px;
   object-fit: cover;
-  box-shadow: 0 0 0 1px var(--line), 0 18px 34px -18px rgba(211,27,31,0.4);
+  box-shadow: 0 0 0 1px rgba(246,239,225,0.22), 0 0 0 6px rgba(10,8,6,0.35), 0 22px 44px -16px rgba(255,138,31,0.45);
 }
 .hero-eyebrow{
   margin: 0 0 14px;
@@ -207,12 +245,14 @@ h1, h2, h3, h4{
   color: var(--cream);
   max-width: 15ch;
   margin: 0 auto;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.55);
 }
 .hero-copy{
   max-width: 46ch;
   margin: 22px auto 0;
-  color: var(--smoke);
+  color: rgba(246,239,225,0.84);
   font-size: 1.05rem;
+  text-shadow: 0 1px 14px rgba(0,0,0,0.6);
 }
 .hero-actions{
   display: flex;
@@ -236,11 +276,32 @@ h1, h2, h3, h4{
   box-shadow: 0 8px 18px -10px rgba(211,27,31,0.5);
 }
 .btn-ghost{
-  background: transparent;
+  background: rgba(10,8,6,0.35);
   color: var(--cream);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(246,239,225,0.32);
+  backdrop-filter: blur(4px);
 }
 .btn-ghost:hover{ border-color: var(--ember); }
+
+/* CTA de delivery por WhatsApp (hero) */
+.btn-delivery{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1fb25a, #128c4a);
+  color: #fff;
+  box-shadow: 0 10px 26px -10px rgba(31,178,90,0.65);
+}
+.btn-delivery:hover{ background: linear-gradient(135deg, #25c566, #159a52); }
+.btn-delivery .btn-icon{ flex-shrink: 0; }
+.hero-delivery-note{
+  margin: 16px 0 0;
+  font-size: 0.85rem;
+  color: rgba(246,239,225,0.78);
+  text-shadow: 0 1px 10px rgba(0,0,0,0.6);
+}
+.hero-delivery-note strong{ color: var(--gold); font-weight: 800; letter-spacing: 0.02em; }
 
 .hero-facts{
   list-style: none;
@@ -250,14 +311,15 @@ h1, h2, h3, h4{
   flex-wrap: wrap;
   margin: 52px 0 0;
   padding: 28px 0 0;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(246,239,225,0.18);
 }
 .hero-facts li{
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 0.82rem;
-  color: var(--smoke);
+  color: rgba(246,239,225,0.78);
+  text-shadow: 0 1px 10px rgba(0,0,0,0.6);
 }
 .hero-facts span{
   font-family: var(--font-display);
@@ -610,3 +672,15 @@ h1, h2, h3, h4{
 .pizza-size-note{margin:0 0 1rem;font-size:.85rem;opacity:.85}
 .pizza-prices{display:grid;grid-template-columns:repeat(3,minmax(45px,1fr));gap:8px;text-align:right;min-width:165px;white-space:nowrap}
 @media(max-width:520px){.pizza-prices{min-width:135px;gap:5px;font-size:.82rem}.menu-panel#pizzas .dish-name{max-width:57%}}
+
+/* ============================================================
+   Hero: ajustes móviles
+   ============================================================ */
+@media (max-width: 760px){
+  .hero{ min-height: 0; padding: 64px 0 56px; }
+  .hero-bg img{ object-position: 20% 100%; }
+}
+@media (max-width: 520px){
+  .hero-actions{ flex-direction: column; align-items: stretch; max-width: 340px; margin-left: auto; margin-right: auto; }
+  .hero-actions .btn{ text-align: center; }
+}

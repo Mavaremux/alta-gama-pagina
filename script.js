@@ -65,6 +65,40 @@
     });
   });
 
+  // Parallax sutil del fondo del hero (solo escritorio y sin "reducir movimiento")
+  var heroEl = document.getElementById("hero");
+  var heroImg = heroEl ? heroEl.querySelector(".hero-bg img") : null;
+  var canParallax =
+    heroImg &&
+    window.matchMedia &&
+    window.matchMedia("(min-width: 900px)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (canParallax) {
+    var ticking = false;
+
+    var updateParallax = function () {
+      var heroH = heroEl.offsetHeight;
+      var y = window.pageYOffset || 0;
+      if (y <= heroH) {
+        var offset = Math.min(y * 0.12, heroH * 0.07);
+        heroImg.style.transform = "translate3d(0," + offset.toFixed(1) + "px,0)";
+      }
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateParallax);
+        }
+      },
+      { passive: true }
+    );
+  }
+
   // Botón "Pedir" por WhatsApp en cada plato del menú.
   // Se inyecta dentro de cada <li> existente: no se modifica la estructura del menú.
   var WHATSAPP_NUMBER = "584249516868";
