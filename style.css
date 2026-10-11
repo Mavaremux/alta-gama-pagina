@@ -605,3 +605,8 @@ h1, h2, h3, h4{
     white-space: nowrap;
   }
 }
+
+/* Precios por tamaño en la carta de pizzas */
+.pizza-size-note{margin:0 0 1rem;font-size:.85rem;opacity:.85}
+.pizza-prices{display:grid;grid-template-columns:repeat(3,minmax(45px,1fr));gap:8px;text-align:right;min-width:165px;white-space:nowrap}
+@media(max-width:520px){.pizza-prices{min-width:135px;gap:5px;font-size:.82rem}.menu-panel#pizzas .dish-name{max-width:57%}}
