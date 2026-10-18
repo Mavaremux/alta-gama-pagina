@@ -3,28 +3,24 @@ n,plato,descripcion,seccion_en_la_web,seccion_en_menu_fisico,ubicacion_en_la_web
 2,Arepa de Queso de Mano,,Desayunos,Desayunos (Arepas con),Después de Arepa de Lengua en Salsa,5.00
 3,Arepa de Ensalada de Atún,,Desayunos,Desayunos (Arepas con),Después de Arepa de Queso de Mano,5.00
 4,Desayuno Criollo de la Casa,"huevo, queso guayanés, pollo, carne y arepa",Desayunos,Desayunos,Después de Desayuno Criollo,10.00
-5,Cachapa con Queso Guayanés y Aguacate,,Cachapas,Desayunos (Cachapas),Al final de Cachapas,
-6,Cachapa con Doble Contorno,,Cachapas,Desayunos (Cachapas),Al final de Cachapas,
-7,"Arepita, Nata y Queso de Mano",,Entradas (pestaña nueva),Entradas,Primer plato de Entradas,5.00
-8,Pan con Ajo,,Entradas (pestaña nueva),Entradas,"Después de Arepita, Nata y Queso de Mano",4.00
-9,Casabe con Ajo y Queso,,Entradas (pestaña nueva),Entradas,Después de Pan con Ajo,4.00
-10,Tequeños Especiales de la Casa,,Entradas (pestaña nueva),Entradas,Después de Casabe con Ajo y Queso,5.00
-11,Champiñones al Ajillo,,Entradas (pestaña nueva),Entradas,Después de Tequeños Especiales de la Casa,5.00
-12,Carpaccio,,Entradas (pestaña nueva),Entradas,Último plato de Entradas,15.00
-13,Paella Valenciana,,Pastas y Arroces (antes 'Pastas'),Pastas y Arroces,"Inicio de la sección, antes de Pasticho",22.00
-14,Fideuás de Mariscos,,Pastas y Arroces (antes 'Pastas'),Pastas y Arroces,Después de Paella Valenciana,22.00
-15,Linguinis al Fileto,,Pastas y Arroces (antes 'Pastas'),Pastas y Arroces,Antes de Pasta Filetto Bettina,18.00
-16,Pasta Amatriciana,,Pastas y Arroces (antes 'Pastas'),Pastas y Arroces,Antes de Pasta Puttanesca,18.00
+5,"Arepita, Nata y Queso de Mano",,Entradas,Entradas,Primer plato de Entradas,5.00
+6,Pan con Ajo,,Entradas,Entradas,"Después de Arepita, Nata y Queso de Mano",4.00
+7,Casabe con Ajo y Queso,,Entradas,Entradas,Después de Pan con Ajo,4.00
+8,Tequeños Especiales de la Casa,,Entradas,Entradas,Después de Casabe con Ajo y Queso,5.00
+9,Champiñones al Ajillo,,Entradas,Entradas,Después de Tequeños Especiales de la Casa,5.00
+10,Carpaccio,,Entradas,Entradas,Último plato de Entradas,15.00
+11,Paella Valenciana,,Pastas y Arroces,Pastas y Arroces,"Inicio de la sección, antes de Pasticho",22.00
+12,Fideuás de Mariscos,,Pastas y Arroces,Pastas y Arroces,Después de Paella Valenciana,22.00
+13,Linguinis al Fileto,,Pastas y Arroces,Pastas y Arroces,Antes de Pasta Filetto Bettina,18.00
+14,Pasta Amatriciana,,Pastas y Arroces,Pastas y Arroces,Antes de Pasta Puttanesca,18.00
+15,Salteado de Lomito,,Pastas y Arroces,Pastas y Arroces,Después de Pasta Marinera,18.00
+16,Salteado de Lomito con Champiñones,,Pastas y Arroces,Pastas y Arroces,Después de Salteado de Lomito,18.00
 17,Escalopinas de Lomito,,Carnes y Aves,Platos Ejecutivos,Después de Pabellón Criollo,20.00
-18,Carne a la Primavera,,Carnes y Aves,Platos Ejecutivos,Después de Estofado de Cordero,18.00
-19,Salteado de Lomito al Jerez,,Carnes y Aves,Carnes y Aves,Después de Medallones de Lomito al Vinotinto,18.00
-20,Salteado de Lomito con Champiñones,,Carnes y Aves,Carnes y Aves,Después de Salteado de Lomito al Jerez,18.00
-21,Pollo Grillé,,Carnes y Aves,Carnes y Aves,Antes de Pollo a la Plancha,18.00
-22,Parrilla Personal,,Asados y Brasas,Parrillas,Después de Parrilla Alta Gama,12.00
-23,Pollo a la Broster,,Asados y Brasas,Parrillas,Después de Pollo Asado (medio),20.00
-24,Ración de Queso de Mano,,Asados y Brasas,Raciones,Después de Ración de Chorizo,3.00
-25,Ración de Queso Guayanés,,Asados y Brasas,Raciones,Después de Ración de Queso de Mano,3.00
-26,Ración de Queso Mozzarella,,Asados y Brasas,Raciones,Después de Ración de Queso Guayanés,3.00
-27,Hamburguesa Clásica,"salsa clásica, vegetales, jamón, queso y 200 grs de carne",Comida Rápida,Hamburguesas,Antes de Hamburguesa Crispy,7.00
-28,Ensalada Criolla Coleslaw,,Ensaladas,Ensaladas,Al final de Ensaladas,
-29,Malta,,Bebidas,Bebidas,Después de Refresco (2 litros),1.00
+18,Carne a la Primavera,,Carnes y Aves,Platos Ejecutivos,Después de Asopado de Cordero,18.00
+19,Pollo Grillé,,Carnes y Aves,Carnes y Aves,Antes de Pollo a la Plancha,18.00
+20,Pollo a la Broaster,,Carnes y Aves,Carnes y Aves,Después de Pollo a la Plancha,20.00
+21,Ración de Queso de Mano,,Asados y Brasas,Raciones,Después de Ración de Chorizo,3.00
+22,Ración de Queso Guayanés,,Asados y Brasas,Raciones,Después de Ración de Queso de Mano,3.00
+23,Ración de Queso Mozzarella,,Asados y Brasas,Raciones,Después de Ración de Queso Guayanés,3.00
+24,Hamburguesa Clásica,"salsa clásica, vegetales, jamón, queso y 200 grs de carne",Comida Rápida,Hamburguesas,Antes de Hamburguesa Crispy,7.00
+25,Malta,,Bebidas,Bebidas,Después de Refresco (2 litros),1.00
