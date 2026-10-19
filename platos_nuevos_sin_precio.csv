@@ -19,8 +19,8 @@ n,plato,descripcion,seccion_en_la_web,seccion_en_menu_fisico,ubicacion_en_la_web
 18,Carne a la Primavera,,Carnes y Aves,Platos Ejecutivos,Después de Asopado de Cordero,18.00
 19,Pollo Grillé,,Carnes y Aves,Carnes y Aves,Antes de Pollo a la Plancha,18.00
 20,Pollo a la Broaster,,Carnes y Aves,Carnes y Aves,Después de Pollo a la Plancha,20.00
-21,Ración de Queso de Mano,,Asados y Brasas,Raciones,Después de Ración de Chorizo,3.00
-22,Ración de Queso Guayanés,,Asados y Brasas,Raciones,Después de Ración de Queso de Mano,3.00
-23,Ración de Queso Mozzarella,,Asados y Brasas,Raciones,Después de Ración de Queso Guayanés,3.00
+21,Ración de Queso de Mano,,Asados y Brasas,Raciones,Después de Ración de Chorizo,5.00
+22,Ración de Queso Guayanés,,Asados y Brasas,Raciones,Después de Ración de Queso de Mano,5.00
+23,Ración de Queso Mozzarella,,Asados y Brasas,Raciones,Después de Ración de Queso Guayanés,5.00
 24,Hamburguesa Clásica,"salsa clásica, vegetales, jamón, queso y 200 grs de carne",Comida Rápida,Hamburguesas,Antes de Hamburguesa Crispy,7.00
 25,Malta,,Bebidas,Bebidas,Después de Refresco (2 litros),1.00
